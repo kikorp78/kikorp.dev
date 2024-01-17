@@ -12,11 +12,6 @@ const container: Variants = {
     transition: {
       staggerChildren: 0.5
     }
-  },
-  hidden: {
-    transition: {
-      staggerChildren: 0.5
-    }
   }
 };
 
@@ -26,8 +21,7 @@ const item: Variants = {
     transition: { duration: 0.75, ease: 'backOut' }
   },
   hidden: {
-    opacity: 0,
-    transition: { duration: 0.75, ease: 'backOut' }
+    opacity: 0
   }
 };
 
@@ -40,7 +34,7 @@ const Projects = () => {
           icon={faLightbulb}
         />
         <p className="text-neutral-300 text-paragraph-sm font-bold uppercase">
-          My current projects and prior experience
+          Current projects and prior experience
         </p>
       </div>
       <motion.div
@@ -54,6 +48,7 @@ const Projects = () => {
           name="Ivycord.js"
           description="A powerful library for interacting with the Discord API, written in TypeScript."
           iconURL="/ivycordjs.jpg"
+          color="ivycord"
           role="Lead Maintainer"
           type="Library"
           openSource
@@ -66,6 +61,7 @@ const Projects = () => {
           name="Marvo"
           description="A complete multi-purpose Discord bot with a broad range of interactive features."
           iconURL="/marvo.jpg"
+          color="marvo"
           role="Co-Founder & Lead Developer"
           type="SaaS"
           websiteURL="https://marvo.gg"
@@ -75,8 +71,9 @@ const Projects = () => {
         <Project
           variants={item}
           name="Spoke Discord Server"
-          description="A Discord server based in the Balkan Region with over 1,000 members and a unique bot with exceptional features."
+          description="A Discord server known for pushing the boundaries in server innovation and engagement."
           iconURL="/spoke.webp"
+          color="spoke"
           role="Co-Owner & Lead Developer"
           type="Discord Server"
           startTime="Late 2020"

@@ -12,7 +12,7 @@ const Tools = () => {
           icon={faGem}
         />
         <p className="text-neutral-300 text-paragraph-sm font-bold uppercase">
-          All the tools and technologies in my arsenal
+          Tools and technologies in my arsenal
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-start gap-5">
@@ -56,6 +56,24 @@ const Tools = () => {
             'CI/CD',
             'Quick Deployment'
           ]}
+        />
+        <Tool
+          name="VSCode"
+          description="A lightweight and powerful source code editor that comes with built-in support for a wide variety of languages and frameworks, including JS/TS and Node.js"
+          iconURL="/vscode.png"
+          tags={['Code Editor', 'IDE']}
+        />
+        <Tool
+          name="MongoDB"
+          description="A document-oriented NoSQL database used for high volume data storage. It is a flexible and scalable database, which makes it a great choice for any Node.js application."
+          iconURL="/mongodb.png"
+          tags={['Database', 'NoSQL', 'Document-Oriented']}
+        />
+        <Tool
+          name="PostgreSQL"
+          description="A relational database management system that emphasizes extensibility and SQL compliance. It is a great choice for any application that requires a relational database."
+          iconURL="/postgres.png"
+          tags={['Database', 'SQL', 'Relational']}
         />
         <Tool
           name="ESLint"

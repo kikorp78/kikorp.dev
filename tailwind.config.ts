@@ -8,15 +8,17 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
-    maxHeight: {
-      '5/6': '83.333333%'
-    },
     colors: {
       primary: '#8c58f5',
       warning: '#f4b231',
       neutral: {
         100: '#e6e6e6',
         300: '#737373'
+      },
+      projects: {
+        ivycord: '#29e08e',
+        marvo: '#4d7fff',
+        spoke: '#b66bd4'
       },
       white: '#ffffff',
       black: '#000000'
@@ -49,25 +51,6 @@ const config: Config = {
       'mobile-h4': ['24px', { lineHeight: '32px', letterSpacing: '0' }],
       'mobile-h5': ['20px', { lineHeight: '28px', letterSpacing: '0' }],
       'mobile-h6': ['18px', { lineHeight: '24px', letterSpacing: '0' }]
-    },
-    fontFamily: {
-      sans: 'Inter, sans-serif',
-      poppins: 'Poppins, Inter, sans-serif',
-      whitney: 'Whitney, Inter, sans-serif'
-    },
-    boxShadow: {
-      xxl: '0px 25px 50px -12px rgba(0, 0, 0, 0.25);',
-      xl: '0px 8px 10px -6px rgba(0, 0, 0, 0.1), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);',
-      lg: '0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);',
-      md: '0px 2px 4px -2px rgba(0, 0, 0, 0.1), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);',
-      sm: '0px 1px 2px -1px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.1);',
-      xs: '0px 1px 2px rgba(0, 0, 0, 0.05);'
-    },
-    backdropBlur: {
-      xl: '20px',
-      lg: '12px',
-      md: '8px',
-      sm: '4px'
     }
   },
   plugins: []

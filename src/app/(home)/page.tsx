@@ -13,7 +13,7 @@ const Home = () => {
         <LandingContainer />
         <Projects />
         <Tools />
-        <hr className="w-full h-[1px] bg-neutral-100 border-none rounded-full" />
+        {/* <hr className="w-full h-[1px] bg-neutral-100 border-none rounded-full" /> */}
         <Footer />
       </div>
     </div>

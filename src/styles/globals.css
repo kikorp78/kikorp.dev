@@ -38,18 +38,7 @@ body {
   transform-origin: bottom left;
 }
 
-/*
-
-
-
-
-
-
-
-
-
-*/
-
+/* Landing container text animation */
 .landing-container-animation {
   position: relative;
   animation: slideIn 2s forwards;
@@ -75,6 +64,7 @@ body {
   animation-delay: 1.5s;
 }
 
+/* Keyframes */
 @keyframes slideIn {
   100% {
     background-size: 100% 100%;
