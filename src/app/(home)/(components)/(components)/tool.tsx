@@ -1,5 +1,3 @@
-'use client';
-
 import { IconFlag } from '@tabler/icons-react';
 
 import Image from 'next/image';

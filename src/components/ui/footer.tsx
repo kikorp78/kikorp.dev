@@ -7,7 +7,7 @@ import { FC } from 'react';
 
 const Footer: FC = () => {
   return (
-    <div className="flex justify-between items-center space-x-3 border-t border-border py-5">
+    <div className="flex justify-between items-center py-5 space-x-3 border-t border-border">
       <p className="text-text text-paragraph-xs font-medium">
         &copy; kikorp.dev &mdash; 2024, All Rights Reserved
       </p>

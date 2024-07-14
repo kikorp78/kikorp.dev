@@ -16,14 +16,17 @@ const ProjectTag: FC<Props> = ({ content, icon, url }) => {
       {url ? (
         <div className="group flex items-center space-x-[6px]">
           <Link
-            className="group-hover:text-text-hover text-text text-paragraph-xs font-medium transition"
+            className="text-text group-hover:text-text-hover text-paragraph-xs font-medium transition"
             href={url}
             target="_blank"
             rel="noopener,noreferrer"
           >
             {content}
           </Link>
-          <IconExternalLink className="text-text transition" size={16} />
+          <IconExternalLink
+            className="text-text group-hover:text-text-hover transition"
+            size={16}
+          />
         </div>
       ) : (
         <p className="text-text text-paragraph-xs font-medium">{content}</p>

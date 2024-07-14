@@ -23,8 +23,8 @@ const Navbar: FC = () => {
         <Link
           className="w-9 h-9 hover:bg-border flex justify-center items-center rounded-md transition"
           href={Constants.GITHUB_URL}
-          target="_blank"
-          rel="noopener,noreferrer"
+          /* target="_blank"
+          rel="noopener,noreferrer" */
         >
           <IconBrandGithub />
         </Link>
