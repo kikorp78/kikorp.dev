@@ -1,45 +1,42 @@
 import Constants from '@/utils/constants';
-import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconBrandDiscord, IconBrandGithub } from '@tabler/icons-react';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { FC } from 'react';
 
-const Navbar = () => {
+import ThemeSwitch from './(components)/ThemeSwitch';
+
+const Navbar: FC = () => {
   return (
     <div className="flex justify-between items-center py-8 md:py-10">
       <Image
+        className="w-12 h-12"
         src="/klopov.png"
-        width={48}
-        height={48}
+        width={0}
+        height={0}
+        sizes="100vw"
         alt="official avatar"
         priority
       />
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-2">
         <Link
-          className="group"
+          className="w-9 h-9 hover:bg-border flex justify-center items-center rounded-md transition"
           href={Constants.GITHUB_URL}
           target="_blank"
           rel="noopener,noreferrer"
         >
-          <FontAwesomeIcon
-            className="transition group-hover:scale-90"
-            icon={faGithub}
-            size="xl"
-          />
+          <IconBrandGithub />
         </Link>
         <Link
-          className="group"
+          className="w-9 h-9 hover:bg-border flex justify-center items-center rounded-md transition"
           href={Constants.DISCORD_URL}
           target="_blank"
           rel="noopener,noreferrer"
         >
-          <FontAwesomeIcon
-            className="transition group-hover:scale-90"
-            icon={faDiscord}
-            size="xl"
-          />
+          <IconBrandDiscord />
         </Link>
+        <ThemeSwitch />
       </div>
     </div>
   );

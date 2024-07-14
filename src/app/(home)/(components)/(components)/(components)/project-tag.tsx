@@ -1,42 +1,32 @@
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconExternalLink } from '@tabler/icons-react';
 
 import Link from 'next/link';
+import { FC, ReactElement, cloneElement } from 'react';
 
 interface Props {
   content: string;
-  icon: IconDefinition;
+  icon: ReactElement;
   url?: string;
 }
 
-const ProjectTag = ({ content, icon, url }: Props) => {
+const ProjectTag: FC<Props> = ({ content, icon, url }) => {
   return (
-    <div className="flex items-center space-x-2">
-      <FontAwesomeIcon
-        className="text-opacity-80 text-neutral-300"
-        icon={icon}
-      />
+    <div className="flex items-center space-x-[6px]">
+      {cloneElement(icon, { className: 'text-text' })}
       {url ? (
-        <div className="group flex items-center space-x-2">
+        <div className="group flex items-center space-x-[6px]">
           <Link
-            className="text-opacity-80 group-hover:text-opacity-100 text-neutral-300 text-paragraph-xs font-medium transition"
+            className="group-hover:text-text-hover text-text text-paragraph-xs font-medium transition"
             href={url}
             target="_blank"
             rel="noopener,noreferrer"
           >
             {content}
           </Link>
-          <FontAwesomeIcon
-            className="text-opacity-80 group-hover:text-opacity-100 text-neutral-300 transition"
-            icon={faArrowUpRightFromSquare}
-            size="xs"
-          />
+          <IconExternalLink className="text-text transition" size={16} />
         </div>
       ) : (
-        <p className="text-opacity-80 text-neutral-300 text-paragraph-xs font-medium">
-          {content}
-        </p>
+        <p className="text-text text-paragraph-xs font-medium">{content}</p>
       )}
     </div>
   );

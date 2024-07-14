@@ -1,26 +1,28 @@
 import Constants from '@/utils/constants';
-import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconBrandDiscord, IconBrandGithub } from '@tabler/icons-react';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { FC } from 'react';
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
-    <div className="flex justify-between items-center space-x-3 border-t border-neutral-100 py-5">
-      <p className="text-opacity-80 text-neutral-300 text-paragraph-xs font-medium">
+    <div className="flex justify-between items-center space-x-3 border-t border-border py-5">
+      <p className="text-text text-paragraph-xs font-medium">
         &copy; kikorp.dev &mdash; 2024, All Rights Reserved
       </p>
       <div className="flex items-center space-x-5">
         <div className="hidden sm:flex items-center space-x-2">
           <Image
+            className="w-4 h-4"
             src="/nextjs.svg"
-            width={16}
-            height={16}
+            width={0}
+            height={0}
+            sizes="100vw"
             alt="Next.js Logo"
             priority
           />
-          <p className="text-opacity-80 text-neutral-300 text-paragraph-xs font-medium">
+          <p className="text-text text-paragraph-xs font-medium">
             Built with Next.js
           </p>
         </div>
@@ -31,11 +33,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener,noreferrer"
           >
-            <FontAwesomeIcon
-              className="text-opacity-80 group-hover:text-opacity-100 text-neutral-300 transition"
-              icon={faGithub}
-              size="lg"
-            />
+            <IconBrandGithub className="text-text group-hover:text-text-hover dark:group-hover:text-white transition" />
           </Link>
           <Link
             className="group"
@@ -43,11 +41,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener,noreferrer"
           >
-            <FontAwesomeIcon
-              className="text-opacity-80 group-hover:text-opacity-100 text-neutral-300 transition"
-              icon={faDiscord}
-              size="lg"
-            />
+            <IconBrandDiscord className="text-text group-hover:text-text-hover dark:group-hover:text-white transition" />
           </Link>
         </div>
       </div>

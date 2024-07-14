@@ -1,38 +1,34 @@
-import { faFlag } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+'use client';
+
+import { IconFlag } from '@tabler/icons-react';
 
 import Image from 'next/image';
+import { FC } from 'react';
 
 interface Props {
   name: string;
-  description: string;
   iconURL: string;
   tags: string[];
 }
 
-const Tool = ({ name, description, iconURL, tags }: Props) => {
+const Tool: FC<Props> = ({ name, iconURL, tags }) => {
   return (
-    <div className="hover:bg-opacity-50 hover:bg-neutral-100 flex flex-col p-5 space-y-3 border border-neutral-100 rounded-lg transition select-none">
+    <div className="hover:bg-background-hover flex flex-col p-5 space-y-3 border border-border rounded-lg transition select-none">
       <div className="flex items-center space-x-2">
         <Image
-          className="rounded"
+          className="w-6 h-6 rounded"
           src={iconURL}
-          width={24}
-          height={24}
+          width={0}
+          height={0}
+          sizes="100vw"
           alt="tool image"
           priority
         />
         <p className="text-paragraph-md font-bold">{name}</p>
       </div>
-      <p className="text-neutral-300 text-paragraph-sm font-medium">
-        {description}
-      </p>
-      <div className="flex items-center space-x-2">
-        <FontAwesomeIcon
-          className="text-opacity-80 text-neutral-300"
-          icon={faFlag}
-        />
-        <p className="text-opacity-80 text-neutral-300 text-paragraph-xs font-medium">
+      <div className="flex items-center space-x-[6px]">
+        <IconFlag className="flex-shrink-0 text-text" />
+        <p className="text-text text-paragraph-xs font-medium">
           {tags.join(', ')}
         </p>
       </div>

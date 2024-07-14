@@ -1,22 +1,22 @@
 'use client';
 
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
-  faCalendar,
-  faFlag,
-  faUser
-} from '@fortawesome/free-regular-svg-icons';
-import { faCode, faEarthAmerica } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+  IconBrandGithub,
+  IconCalendar,
+  IconCode,
+  IconFlag,
+  IconUser,
+  IconWorld
+} from '@tabler/icons-react';
 
 import clsx from 'clsx';
 import { Variants, motion } from 'framer-motion';
 import Image from 'next/image';
+import { FC } from 'react';
 
 import ProjectTag from './(components)/project-tag';
 
-// Not a really good implementation of the idea, but it works for now.
-type ProjectColor = 'ivycord' | 'marvo' | 'spoke';
+type ProjectColor = 'marvo' | 'spoke';
 
 interface Props {
   variants: Variants;
@@ -33,7 +33,7 @@ interface Props {
   endTime: string;
 }
 
-const Project = ({
+const Project: FC<Props> = ({
   variants,
   name,
   description,
@@ -46,11 +46,9 @@ const Project = ({
   websiteURL,
   startTime,
   endTime
-}: Props) => {
+}) => {
   const getColor = () => {
     switch (color) {
-      case 'ivycord':
-        return 'hover:bg-projects-ivycord hover:border-projects-ivycord';
       case 'marvo':
         return 'hover:bg-projects-marvo hover:border-projects-marvo';
       case 'spoke':
@@ -59,59 +57,58 @@ const Project = ({
   };
 
   return (
-    <motion.div
-      variants={variants}
-      className={clsx(
-        'w-full hover:bg-opacity-10 flex flex-col xl:flex-row items-start p-5 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-neutral-100 rounded-lg transition select-none',
-        getColor()
-      )}
-    >
-      <div className="w-full flex flex-col space-y-3">
-        <div className="flex items-center space-x-2">
-          <Image
-            className="rounded"
-            src={iconURL}
-            width={24}
-            height={24}
-            alt="project image"
-            priority
-          />
-          <p className="text-paragraph-md font-bold">{name}</p>
-        </div>
-        <p className="text-neutral-300 text-paragraph-sm font-medium">
-          {description}
-        </p>
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-          <ProjectTag content={role} icon={faUser} />
-          <ProjectTag content={type} icon={faFlag} />
-          <ProjectTag
-            content={openSource ? 'Open Source' : 'Source Not Available'}
-            icon={faCode}
-          />
-          {githubURL && (
-            <ProjectTag
-              content="View on GitHub"
-              icon={faGithub}
-              url={githubURL}
+    <motion.div variants={variants} className="w-full">
+      <div
+        className={clsx(
+          'w-full hover:bg-opacity-10 flex flex-col xl:flex-row items-start p-5 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-border rounded-lg select-none transition',
+          getColor()
+        )}
+      >
+        <div className="w-full flex flex-col space-y-3">
+          <div className="flex items-center space-x-2">
+            <Image
+              className="w-6 h-6 rounded"
+              src={iconURL}
+              width={0}
+              height={0}
+              sizes="100vw"
+              alt="project image"
+              priority
             />
-          )}
-          {websiteURL && (
+            <p className="text-paragraph-md font-bold">{name}</p>
+          </div>
+          <p className="text-text text-paragraph-sm font-medium">
+            {description}
+          </p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+            <ProjectTag content={role} icon={<IconUser />} />
+            <ProjectTag content={type} icon={<IconFlag />} />
             <ProjectTag
-              content="Visit Website"
-              icon={faEarthAmerica}
-              url={websiteURL}
+              content={openSource ? 'Open Source' : 'Source Not Available'}
+              icon={<IconCode />}
             />
-          )}
+            {githubURL && (
+              <ProjectTag
+                content="View on GitHub"
+                icon={<IconBrandGithub />}
+                url={githubURL}
+              />
+            )}
+            {websiteURL && (
+              <ProjectTag
+                content="Visit Website"
+                icon={<IconWorld />}
+                url={websiteURL}
+              />
+            )}
+          </div>
         </div>
-      </div>
-      <div className="flex flex-shrink-0 items-center space-x-2">
-        <FontAwesomeIcon
-          className="text-opacity-80 text-neutral-300"
-          icon={faCalendar}
-        />
-        <p className="text-opacity-80 text-neutral-300 text-paragraph-xs font-medium">
-          {startTime} &ndash; {endTime}
-        </p>
+        <div className="flex flex-shrink-0 items-center space-x-[6px]">
+          <IconCalendar className="text-text" />
+          <p className="text-text text-paragraph-xs font-medium">
+            {startTime} &ndash; {endTime}
+          </p>
+        </div>
       </div>
     </motion.div>
   );

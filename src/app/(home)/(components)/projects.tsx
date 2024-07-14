@@ -1,9 +1,9 @@
 'use client';
 
-import { faLightbulb } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconBulb } from '@tabler/icons-react';
 
 import { Variants, motion } from 'framer-motion';
+import { FC } from 'react';
 
 import Project from './(components)/project';
 
@@ -25,15 +25,12 @@ const item: Variants = {
   }
 };
 
-const Projects = () => {
+const Projects: FC = () => {
   return (
     <div className="flex flex-col space-y-5">
       <div className="flex items-center space-x-2">
-        <FontAwesomeIcon
-          className="text-opacity-80 text-neutral-300"
-          icon={faLightbulb}
-        />
-        <p className="text-neutral-300 text-paragraph-sm font-bold uppercase">
+        <IconBulb className="text-text" />
+        <p className="text-text text-paragraph-sm font-bold uppercase">
           Current projects and prior experience
         </p>
       </div>
@@ -43,7 +40,7 @@ const Projects = () => {
         variants={container}
         className="flex flex-col lg:flex-row items-start lg:space-x-5 space-y-5 lg:space-y-0"
       >
-        <Project
+        {/* <Project
           variants={item}
           name="Ivycord.js"
           description="A powerful library for interacting with the Discord API, written in TypeScript."
@@ -55,7 +52,7 @@ const Projects = () => {
           githubURL="https://github.com/ivycord-js/ivycord.js"
           startTime="Early 2024"
           endTime="Now"
-        />
+        /> */}
         <Project
           variants={item}
           name="Marvo"
