@@ -7,7 +7,7 @@ import { FC, PropsWithChildren } from 'react';
 
 import Providers from './providers';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], preload: true });
 
 export const metadata: Metadata = {
   title: 'kikorp.dev',
