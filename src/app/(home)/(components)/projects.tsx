@@ -31,7 +31,7 @@ const Projects: FC = () => {
       <div className="flex items-center space-x-2">
         <IconBulb className="text-text" />
         <p className="text-text text-paragraph-sm font-bold uppercase">
-          Current projects and prior experience
+          Projects and prior experience
         </p>
       </div>
       <motion.div

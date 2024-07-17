@@ -60,14 +60,14 @@ const Project: FC<Props> = ({
     <motion.div variants={variants} className="w-full">
       <div
         className={clsx(
-          'w-full hover:bg-opacity-10 flex flex-col xl:flex-row items-start p-5 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-border rounded-lg select-none transition',
+          'hover:bg-opacity-10 flex flex-col xl:flex-row items-start p-5 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-border rounded-lg select-none transition',
           getColor()
         )}
       >
         <div className="w-full flex flex-col space-y-3">
           <div className="flex items-center space-x-2">
             <Image
-              className="w-6 h-6 rounded"
+              className="w-6 rounded"
               src={iconURL}
               width={0}
               height={0}

@@ -6,79 +6,110 @@ import Tool from './(components)/tool';
 
 const Tools: FC = () => {
   return (
-    <div className="flex flex-col space-y-5">
+    <div className="flex flex-col space-y-10">
       <div className="flex items-center space-x-2">
         <IconTools className="text-text" />
         <p className="text-text text-paragraph-sm font-bold uppercase">
           Tools and technologies in my arsenal
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 items-start gap-5">
-        <Tool
-          name="TypeScript"
-          iconURL="/typescript.png"
-          tags={['Programming Language', 'JavaScript Superset']}
-        />
-        <Tool
-          name="React.js"
-          iconURL="/reactjs.webp"
-          tags={['Front-end Library', 'UI Library']}
-        />
-        <Tool
-          name="Next.js"
-          iconURL="/nextjs.svg"
-          tags={['Web Framework', 'React.js Framework']}
-        />
-        <Tool
-          name="Tailwind CSS"
-          iconURL="/tailwindcss.png"
-          tags={['CSS Framework', 'Utility-First CSS Framework']}
-        />
-        <Tool
-          name="Nest.js"
-          iconURL="/nestjs.svg"
-          tags={['Back-end Framework', 'Node.js Framework', 'TypeScript-based']}
-        />
-        <Tool
-          name="Git"
-          iconURL="/git.png"
-          tags={[
-            'Version Control',
-            'Source Code Management',
-            'CI/CD',
-            'Quick Deployment'
-          ]}
-        />
-        <Tool
-          name="VSCode"
-          iconURL="/vscode.png"
-          tags={['Code Editor', 'IDE']}
-        />
-        <Tool
-          name="MongoDB"
-          iconURL="/mongodb.png"
-          tags={['Database', 'NoSQL', 'Document-Oriented']}
-        />
-        <Tool
-          name="PostgreSQL"
-          iconURL="/postgres.png"
-          tags={['Database', 'SQL', 'Relational']}
-        />
-        <Tool
-          name="ESLint"
-          iconURL="/eslint.png"
-          tags={['Linting Tool', 'Code Quality Tool']}
-        />
-        <Tool
-          name="Prettier"
-          iconURL="/prettier.png"
-          tags={['Code Formatter', 'Code Quality Tool']}
-        />
-        <Tool
-          name="Linux"
-          iconURL="/linux.png"
-          tags={['Operating System', 'Server OS', 'System Administration']}
-        />
+      <div className="flex flex-col space-y-5">
+        <p className="text-text text-paragraph-xs font-medium uppercase">
+          Programming Languages
+        </p>
+        <hr className="w-full h-[1px] bg-border border-none" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 items-start gap-5">
+          <Tool
+            name="JavaScript"
+            description="Interpreted Language"
+            iconURL="/javascript.png"
+          />
+          <Tool
+            name="TypeScript"
+            description="JavaScript Superset"
+            iconURL="/typescript.png"
+          />
+          <Tool
+            name="Rust"
+            description="General-purpose Language"
+            iconURL="/rust.png"
+          />
+        </div>
+        <p className="text-text text-paragraph-xs">
+          Also familiar with C++, C#, and Java.
+        </p>
+      </div>
+      <div className="flex flex-col space-y-5">
+        <p className="text-text text-paragraph-xs font-medium uppercase">
+          Libraries & Frameworks
+        </p>
+        <hr className="w-full h-[1px] bg-border border-none" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 items-start gap-5">
+          <Tool
+            name="React.js"
+            description="Front-end UI Library"
+            iconURL="/reactjs.webp"
+          />
+          <Tool
+            name="Next.js"
+            description="React.js Framework"
+            iconURL="/nextjs.svg"
+          />
+          <Tool
+            name="Tailwind CSS"
+            description="CSS Framework"
+            iconURL="/tailwindcss.png"
+          />
+          <Tool
+            name="SASS/SCSS"
+            description="CSS Preprocessor"
+            iconURL="/sass.png"
+          />
+          <Tool
+            name="Nest.js"
+            description="Node.js Web Framework"
+            iconURL="/nestjs.svg"
+          />
+        </div>
+      </div>
+      <div className="flex flex-col space-y-5">
+        <p className="text-text text-paragraph-xs font-medium uppercase">
+          Databases & Other Tools
+        </p>
+        <hr className="w-full h-[1px] bg-border border-none" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 items-start gap-5">
+          <Tool
+            name="MongoDB"
+            description="NoSQL Database"
+            iconURL="/mongodb.png"
+          />
+          <Tool
+            name="PostgreSQL"
+            description="Relational Database"
+            iconURL="/postgres.png"
+          />
+          <Tool
+            name="Git"
+            description="Version Control System"
+            iconURL="/git.png"
+          />
+          <Tool name="VSCode" description="Code Editor" iconURL="/vscode.png" />
+          <Tool
+            name="ESLint"
+            description="Linting Tool"
+            iconURL="/eslint.png"
+          />
+          <Tool
+            name="Prettier"
+            description="Code Formatter"
+            iconURL="/prettier.png"
+          />
+          <Tool
+            name="Linux"
+            description="Operating System"
+            iconURL="/linux.png"
+          />
+        </div>
       </div>
     </div>
   );

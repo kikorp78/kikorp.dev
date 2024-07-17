@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
 
 import clsx from 'clsx';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { FC, PropsWithChildren } from 'react';
 
@@ -12,7 +12,10 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'kikorp.dev',
   description:
-    'A personal website of your standard full-stack web developer. Thank you for visiting!',
+    'A personal website of your standard full-stack web developer. Thank you for visiting!'
+};
+
+export const viewport: Viewport = {
   themeColor: '#8c58f5'
 };
 

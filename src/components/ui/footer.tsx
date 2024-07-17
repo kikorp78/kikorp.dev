@@ -1,5 +1,9 @@
 import Constants from '@/utils/constants';
-import { IconBrandDiscord, IconBrandGithub } from '@tabler/icons-react';
+import {
+  IconBrandDiscord,
+  IconBrandGithub,
+  IconCode
+} from '@tabler/icons-react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,13 +12,24 @@ import { FC } from 'react';
 const Footer: FC = () => {
   return (
     <div className="flex justify-between items-center py-5 space-x-3 border-t border-border">
-      <p className="text-text text-paragraph-xs font-medium">
-        &copy; kikorp.dev &mdash; 2024, All Rights Reserved
-      </p>
+      <div className="flex items-center space-x-[6px]">
+        <IconCode className="text-text" size={16} />
+        <p className="text-text text-paragraph-xs font-medium">
+          kikorp.dev &mdash; Open-source on{' '}
+          <Link
+            className="text-primary hover:text-text-hover dark:hover:text-white transition"
+            href={Constants.GITHUB_URL}
+            target="_blank"
+            rel="noopener,noreferrer"
+          >
+            GitHub
+          </Link>
+        </p>
+      </div>
       <div className="flex items-center space-x-5">
         <div className="hidden sm:flex items-center space-x-2">
           <Image
-            className="w-4 h-4"
+            className="w-4"
             src="/nextjs.svg"
             width={0}
             height={0}

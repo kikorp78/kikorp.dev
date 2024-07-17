@@ -8,9 +8,11 @@
   --text-hover: #595959;
 
   --background: #f5f5f5;
-  --background-hover: #e8e8e8;
+  --background-hover: #ededed;
 
   --border: #dbdbdb;
+
+  --skeleton: 168, 168, 168;
 }
 
 .dark {
@@ -18,9 +20,11 @@
   --text-hover: #8c8c8c;
 
   --background: #111111;
-  --background-hover: #1f1f1f;
+  --background-hover: #1a1a1a;
 
   --border: #2b2b2b;
+
+  --skeleton: 94, 94, 94;
 }
 
 /* Global element styling */
@@ -70,9 +74,30 @@ body {
   animation-delay: 1.5s;
 }
 
+/* Skeleton loading animation */
+.skeleton {
+  background: linear-gradient(
+    to right,
+    rgba(var(--skeleton), 0.5) 25%,
+    rgba(var(--skeleton), 1) 50%,
+    rgba(var(--skeleton), 0.5) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 3s infinite linear;
+}
+
 /* Keyframes */
 @keyframes slideIn {
   100% {
     background-size: 100% 100%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
   }
 }
