@@ -15,7 +15,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'next/core-web-vitals'
   ],
-  ignorePatterns: ['.eslintrc.js', 'postcss.config.js', 'next.config.js'],
+  ignorePatterns: ['.eslintrc.cjs', 'postcss.config.mjs', 'next.config.mjs'],
   rules: {
     // Default rules
     'arrow-parens': 'warn',
@@ -29,6 +29,8 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/semi': 'warn',
     '@typescript-eslint/quotes': ['warn', 'single'],
+    '@typescript-eslint/no-unnecessary-condition': 'warn',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
     '@typescript-eslint/require-await': 'error',
     '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/no-floating-promises': 'error',

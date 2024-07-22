@@ -1,13 +1,13 @@
 import '@/styles/globals.css';
 
 import clsx from 'clsx';
-import type { Metadata, Viewport } from 'next';
+import { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { FC, PropsWithChildren } from 'react';
 
 import Providers from './providers';
 
-const inter = Inter({ subsets: ['latin'], preload: true });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'kikorp.dev',

@@ -2,6 +2,21 @@ import { IconTools } from '@tabler/icons-react';
 
 import { FC } from 'react';
 
+import eslint from '../../../../public/eslint.png';
+import git from '../../../../public/git.png';
+import javascript from '../../../../public/javascript.png';
+import linux from '../../../../public/linux.png';
+import mongodb from '../../../../public/mongodb.png';
+import nestjs from '../../../../public/nestjs.svg';
+import nextjs from '../../../../public/nextjs.svg';
+import postgres from '../../../../public/postgres.png';
+import prettier from '../../../../public/prettier.png';
+import reactjs from '../../../../public/reactjs.webp';
+import rust from '../../../../public/rust.png';
+import sass from '../../../../public/sass.png';
+import tailwindcss from '../../../../public/tailwindcss.png';
+import typescript from '../../../../public/typescript.png';
+import vscode from '../../../../public/vscode.png';
 import Tool from './(components)/tool';
 
 const Tools: FC = () => {
@@ -22,17 +37,17 @@ const Tools: FC = () => {
           <Tool
             name="JavaScript"
             description="Interpreted Language"
-            iconURL="/javascript.png"
+            icon={javascript}
           />
           <Tool
             name="TypeScript"
             description="JavaScript Superset"
-            iconURL="/typescript.png"
+            icon={typescript}
           />
           <Tool
             name="Rust"
             description="General-purpose Language"
-            iconURL="/rust.png"
+            icon={rust}
           />
         </div>
         <p className="text-text text-paragraph-xs">
@@ -48,27 +63,19 @@ const Tools: FC = () => {
           <Tool
             name="React.js"
             description="Front-end UI Library"
-            iconURL="/reactjs.webp"
+            icon={reactjs}
           />
-          <Tool
-            name="Next.js"
-            description="React.js Framework"
-            iconURL="/nextjs.svg"
-          />
+          <Tool name="Next.js" description="React.js Framework" icon={nextjs} />
           <Tool
             name="Tailwind CSS"
             description="CSS Framework"
-            iconURL="/tailwindcss.png"
+            icon={tailwindcss}
           />
-          <Tool
-            name="SASS/SCSS"
-            description="CSS Preprocessor"
-            iconURL="/sass.png"
-          />
+          <Tool name="SASS/SCSS" description="CSS Preprocessor" icon={sass} />
           <Tool
             name="Nest.js"
             description="Node.js Web Framework"
-            iconURL="/nestjs.svg"
+            icon={nestjs}
           />
         </div>
       </div>
@@ -78,37 +85,17 @@ const Tools: FC = () => {
         </p>
         <hr className="w-full h-[1px] bg-border border-none" />
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 items-start gap-5">
-          <Tool
-            name="MongoDB"
-            description="NoSQL Database"
-            iconURL="/mongodb.png"
-          />
+          <Tool name="MongoDB" description="NoSQL Database" icon={mongodb} />
           <Tool
             name="PostgreSQL"
             description="Relational Database"
-            iconURL="/postgres.png"
+            icon={postgres}
           />
-          <Tool
-            name="Git"
-            description="Version Control System"
-            iconURL="/git.png"
-          />
-          <Tool name="VSCode" description="Code Editor" iconURL="/vscode.png" />
-          <Tool
-            name="ESLint"
-            description="Linting Tool"
-            iconURL="/eslint.png"
-          />
-          <Tool
-            name="Prettier"
-            description="Code Formatter"
-            iconURL="/prettier.png"
-          />
-          <Tool
-            name="Linux"
-            description="Operating System"
-            iconURL="/linux.png"
-          />
+          <Tool name="Git" description="Version Control System" icon={git} />
+          <Tool name="VSCode" description="Code Editor" icon={vscode} />
+          <Tool name="ESLint" description="Linting Tool" icon={eslint} />
+          <Tool name="Prettier" description="Code Formatter" icon={prettier} />
+          <Tool name="Linux" description="Operating System" icon={linux} />
         </div>
       </div>
     </div>

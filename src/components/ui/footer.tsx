@@ -9,6 +9,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import nextjs from '../../../public/nextjs.svg';
+
 const Footer: FC = () => {
   return (
     <div className="flex justify-between items-center py-5 space-x-3 border-t border-border">
@@ -28,15 +30,7 @@ const Footer: FC = () => {
       </div>
       <div className="flex items-center space-x-5">
         <div className="hidden sm:flex items-center space-x-2">
-          <Image
-            className="w-4"
-            src="/nextjs.svg"
-            width={0}
-            height={0}
-            sizes="100vw"
-            alt="Next.js Logo"
-            priority
-          />
+          <Image className="w-4" src={nextjs} sizes="16px" alt="next.js logo" />
           <p className="text-text text-paragraph-xs font-medium">
             Built with Next.js
           </p>

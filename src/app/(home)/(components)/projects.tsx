@@ -5,6 +5,8 @@ import { IconBulb } from '@tabler/icons-react';
 import { Variants, motion } from 'framer-motion';
 import { FC } from 'react';
 
+import marvo from '../../../../public/marvo.jpg';
+import spoke from '../../../../public/spoke.webp';
 import Project from './(components)/project';
 
 const container: Variants = {
@@ -57,7 +59,7 @@ const Projects: FC = () => {
           variants={item}
           name="Marvo"
           description="A complete multi-purpose Discord bot with a broad range of interactive features."
-          iconURL="/marvo.jpg"
+          icon={marvo}
           color="marvo"
           role="Co-Founder & Lead Developer"
           type="SaaS"
@@ -69,7 +71,7 @@ const Projects: FC = () => {
           variants={item}
           name="Spoke Discord Server"
           description="A Discord server known for pushing the boundaries in server innovation and engagement."
-          iconURL="/spoke.webp"
+          icon={spoke}
           color="spoke"
           role="Co-Owner & Lead Developer"
           type="Discord Server"

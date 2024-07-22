@@ -11,7 +11,7 @@ import {
 
 import clsx from 'clsx';
 import { Variants, motion } from 'framer-motion';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { FC } from 'react';
 
 import ProjectTag from './(components)/project-tag';
@@ -22,7 +22,7 @@ interface Props {
   variants: Variants;
   name: string;
   description: string;
-  iconURL: string;
+  icon: StaticImageData;
   color: ProjectColor;
   role: string;
   type: string;
@@ -37,7 +37,7 @@ const Project: FC<Props> = ({
   variants,
   name,
   description,
-  iconURL,
+  icon,
   color,
   role,
   type,
@@ -68,10 +68,8 @@ const Project: FC<Props> = ({
           <div className="flex items-center space-x-2">
             <Image
               className="w-6 rounded"
-              src={iconURL}
-              width={0}
-              height={0}
-              sizes="100vw"
+              src={icon}
+              sizes="24px"
               alt="project image"
               priority
             />

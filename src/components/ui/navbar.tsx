@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import avatar from '../../../public/avatar.png';
 import ThemeSwitch from './(components)/ThemeSwitch';
 
 const Navbar: FC = () => {
@@ -12,10 +13,8 @@ const Navbar: FC = () => {
     <div className="flex justify-between items-center py-8 md:py-10">
       <Image
         className="w-12"
-        src="/klopov.png"
-        width={0}
-        height={0}
-        sizes="100vw"
+        src={avatar}
+        sizes="48px"
         alt="official avatar"
         priority
       />
