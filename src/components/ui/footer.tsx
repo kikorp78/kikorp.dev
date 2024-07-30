@@ -6,7 +6,7 @@ import { FC } from 'react';
 
 const Footer: FC = () => {
   return (
-    <div className="flex justify-between items-center py-4 space-x-3 border-t border-border">
+    <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center py-4 sm:space-x-3 space-y-3 sm:space-y-0 border-t border-border">
       <div className="flex items-center space-x-[6px]">
         <IconCode className="text-text" size={16} />
         <p className="text-text text-paragraph-xs font-medium">
@@ -21,7 +21,7 @@ const Footer: FC = () => {
           </Link>
         </p>
       </div>
-      <div className="hidden sm:flex items-center space-x-2">
+      <div className="flex items-center space-x-2">
         <IconBrandNextjs size={20} />
         <p className="text-text text-paragraph-xs font-medium">
           Built with Next.js

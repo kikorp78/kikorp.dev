@@ -57,14 +57,15 @@ const Project: FC<Props> = ({
   };
 
   return (
-    <motion.div variants={variants} className="w-full">
-      <div
-        className={clsx(
-          'hover:bg-opacity-10 flex flex-col xl:flex-row items-start p-4 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-border rounded-lg select-none transition',
-          getColor()
-        )}
-      >
-        <div className="w-full flex flex-col space-y-3">
+    <motion.div
+      variants={variants}
+      className={clsx(
+        'h-full hover:bg-opacity-10 flex flex-col xl:flex-row items-start p-4 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-border rounded-lg select-none transition',
+        getColor()
+      )}
+    >
+      <div className="w-full flex flex-col space-y-4">
+        <div className="flex flex-col space-y-2">
           <div className="flex items-center space-x-2">
             <Image
               className="w-6 rounded"
@@ -78,35 +79,35 @@ const Project: FC<Props> = ({
           <p className="text-text text-paragraph-sm font-medium">
             {description}
           </p>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
-            <ProjectTag content={role} icon={<IconUser />} />
-            <ProjectTag content={type} icon={<IconFlag />} />
+        </div>
+        <div className="flex flex-wrap items-center gap-3">
+          <ProjectTag content={role} icon={<IconUser />} />
+          <ProjectTag content={type} icon={<IconFlag />} />
+          <ProjectTag
+            content={openSource ? 'Open Source' : 'Source Not Available'}
+            icon={<IconCode />}
+          />
+          {githubURL && (
             <ProjectTag
-              content={openSource ? 'Open Source' : 'Source Not Available'}
-              icon={<IconCode />}
+              content="View on GitHub"
+              icon={<IconBrandGithub />}
+              url={githubURL}
             />
-            {githubURL && (
-              <ProjectTag
-                content="View on GitHub"
-                icon={<IconBrandGithub />}
-                url={githubURL}
-              />
-            )}
-            {websiteURL && (
-              <ProjectTag
-                content="Visit Website"
-                icon={<IconWorld />}
-                url={websiteURL}
-              />
-            )}
-          </div>
+          )}
+          {websiteURL && (
+            <ProjectTag
+              content="Visit Website"
+              icon={<IconWorld />}
+              url={websiteURL}
+            />
+          )}
         </div>
-        <div className="flex flex-shrink-0 items-center space-x-[6px]">
-          <IconCalendar className="text-text" />
-          <p className="text-text text-paragraph-xs font-medium">
-            {startTime} &ndash; {endTime}
-          </p>
-        </div>
+      </div>
+      <div className="flex flex-shrink-0 items-center space-x-[6px]">
+        <IconCalendar className="text-text" />
+        <p className="text-text text-paragraph-xs font-medium">
+          {startTime} &ndash; {endTime}
+        </p>
       </div>
     </motion.div>
   );

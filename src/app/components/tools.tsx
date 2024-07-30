@@ -2,8 +2,11 @@ import { IconBrandNextjs, IconTools } from '@tabler/icons-react';
 
 import { FC } from 'react';
 
+import cpp from '../../../public/cpp.png';
+import csharp from '../../../public/csharp.png';
 import eslint from '../../../public/eslint.png';
 import git from '../../../public/git.png';
+import java from '../../../public/java.webp';
 import javascript from '../../../public/javascript.png';
 import linux from '../../../public/linux.png';
 import mongodb from '../../../public/mongodb.png';
@@ -33,17 +36,20 @@ const Tools: FC = () => {
         <p className="text-text text-paragraph-xs font-medium uppercase">
           Programming Languages
         </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 items-start gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-start gap-4">
           <Tool name="JavaScript" icon={javascript} />
           <Tool name="TypeScript" icon={typescript} />
           <Tool name="Rust" icon={rust} />
+          <Tool name="Java" icon={java} />
+          <Tool name="C#" icon={csharp} />
+          <Tool name="C++" icon={cpp} />
         </div>
       </div>
       <div className="flex flex-col space-y-4">
         <p className="text-text text-paragraph-xs font-medium uppercase">
           Libraries & Frameworks
         </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 items-start gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-start gap-4">
           <Tool name="React.js" icon={reactjs} />
           <Tool name="Next.js" icon={<IconBrandNextjs />} />
           <Tool name="Tailwind CSS" icon={tailwindcss} />
@@ -55,7 +61,7 @@ const Tools: FC = () => {
         <p className="text-text text-paragraph-xs font-medium uppercase">
           Databases & Other Tools
         </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 items-start gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-start gap-4">
           <Tool name="MongoDB" icon={mongodb} />
           <Tool name="PostgreSQL" icon={postgres} />
           <Tool name="Git" icon={git} />

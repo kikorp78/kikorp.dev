@@ -32,7 +32,7 @@ const ProjectContainer: FC = () => {
       initial="hidden"
       animate="visible"
       variants={container}
-      className="flex flex-col xl:flex-row items-start xl:space-x-4 space-y-4 xl:space-y-0"
+      className="flex flex-col lg:flex-row items-start lg:space-x-4 space-y-4 lg:space-y-0"
     >
       {/* <Project
         variants={item}
