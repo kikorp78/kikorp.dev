@@ -2,7 +2,7 @@ import { IconArrowDown } from '@tabler/icons-react';
 
 import { FC } from 'react';
 
-const LandingContainer: FC = () => {
+const Hero: FC = () => {
   return (
     <div className="flex flex-col justify-center items-center py-10 md:py-[120px] space-y-16 md:space-y-24">
       <div className="flex flex-col items-center space-y-3">
@@ -24,4 +24,4 @@ const LandingContainer: FC = () => {
   );
 };
 
-export default LandingContainer;
+export default Hero;

@@ -12,13 +12,13 @@ interface Props {
 const Repository: FC<Props> = ({ name, description, url, language }) => {
   return (
     <Link
-      className="hover:bg-background-hover flex flex-col xl:flex-row items-start p-5 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-border rounded-lg cursor-pointer select-none transition"
+      className="hover:bg-background-hover flex flex-col xl:flex-row items-start p-4 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-border rounded-lg cursor-pointer select-none transition"
       href={url}
       target="_blank"
       rel="noopener,noreferrer"
     >
       <div className="w-full flex flex-col space-y-3">
-        <p className="text-paragraph-md font-bold">{name}</p>
+        <p className="text-paragraph-md font-semibold">{name}</p>
         <p className="text-text text-paragraph-sm font-medium">{description}</p>
       </div>
       {language ? (

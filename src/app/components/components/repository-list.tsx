@@ -2,7 +2,7 @@ import { Endpoints } from '@octokit/types';
 
 import { FC } from 'react';
 
-import Repository from './(components)/repository';
+import Repository from './components/repository';
 
 export const fetchRepos = async () => {
   try {
@@ -21,7 +21,7 @@ const RepositoryList: FC = async () => {
   const { data } = await fetchRepos();
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 items-start gap-5">
+    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-start gap-4">
       {data!.map((repo) => (
         <Repository
           key={repo.id}

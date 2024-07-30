@@ -10,12 +10,12 @@ interface Props {
 const ContactLink: FC<Props> = ({ name, icon, url }) => {
   return (
     <Link
-      className="hover:bg-background-hover flex justify-between items-center p-5 space-x-3 border border-border rounded-lg cursor-pointer select-none transition"
+      className="hover:bg-background-hover flex justify-between items-center p-4 space-x-3 border border-border rounded-lg cursor-pointer select-none transition"
       href={url}
       target="_blank"
       rel="noopener,noreferrer"
     >
-      <p className="text-paragraph-md font-bold">{name}</p>
+      <p className="text-paragraph-sm font-semibold">{name}</p>
       {cloneElement(icon)}
     </Link>
   );

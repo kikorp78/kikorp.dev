@@ -1,6 +1,6 @@
 {
   "name": "kikorp.dev",
-  "description": "Personal website, built with React, Next.js and Tailwind CSS. ",
+  "description": "Personal website, built with React, Next.js and Tailwind CSS.",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",

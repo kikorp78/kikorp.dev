@@ -4,6 +4,8 @@
 
 /* Global variables */
 :root {
+  --primary: #8c58f5;
+
   --text: #737373;
   --text-hover: #595959;
 
@@ -46,6 +48,27 @@ body {
     rgba(140, 88, 245, 0.1) 0%,
     rgba(140, 88, 245, 0) 75%
   );
+  display: flex;
+  justify-content: center;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
 }
 
 /* Landing container text animation */

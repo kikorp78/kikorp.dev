@@ -14,7 +14,7 @@ import { Variants, motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 import { FC } from 'react';
 
-import ProjectTag from './(components)/project-tag';
+import ProjectTag from './components/project-tag';
 
 type ProjectColor = 'marvo' | 'spoke';
 
@@ -60,7 +60,7 @@ const Project: FC<Props> = ({
     <motion.div variants={variants} className="w-full">
       <div
         className={clsx(
-          'hover:bg-opacity-10 flex flex-col xl:flex-row items-start p-5 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-border rounded-lg select-none transition',
+          'hover:bg-opacity-10 flex flex-col xl:flex-row items-start p-4 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-border rounded-lg select-none transition',
           getColor()
         )}
       >
@@ -73,12 +73,12 @@ const Project: FC<Props> = ({
               alt="project image"
               priority
             />
-            <p className="text-paragraph-md font-bold">{name}</p>
+            <p className="text-paragraph-md font-semibold">{name}</p>
           </div>
           <p className="text-text text-paragraph-sm font-medium">
             {description}
           </p>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
             <ProjectTag content={role} icon={<IconUser />} />
             <ProjectTag content={type} icon={<IconFlag />} />
             <ProjectTag

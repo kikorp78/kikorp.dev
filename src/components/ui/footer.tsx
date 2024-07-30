@@ -13,14 +13,14 @@ import nextjs from '../../../public/nextjs.svg';
 
 const Footer: FC = () => {
   return (
-    <div className="flex justify-between items-center py-5 space-x-3 border-t border-border">
+    <div className="flex justify-between items-center py-4 space-x-3 border-t border-border">
       <div className="flex items-center space-x-[6px]">
         <IconCode className="text-text" size={16} />
         <p className="text-text text-paragraph-xs font-medium">
           kikorp.dev &mdash; Open-source on{' '}
           <Link
             className="text-primary hover:text-text-hover dark:hover:text-white transition"
-            href={Constants.GITHUB_URL}
+            href={Constants.GITHUB_REPO_URL}
             target="_blank"
             rel="noopener,noreferrer"
           >
@@ -28,7 +28,7 @@ const Footer: FC = () => {
           </Link>
         </p>
       </div>
-      <div className="flex items-center space-x-5">
+      <div className="flex items-center space-x-4">
         <div className="hidden sm:flex items-center space-x-2">
           <Image className="w-4" src={nextjs} sizes="16px" alt="next.js logo" />
           <p className="text-text text-paragraph-xs font-medium">
