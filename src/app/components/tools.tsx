@@ -8,7 +8,6 @@ import javascript from '../../../public/javascript.png';
 import linux from '../../../public/linux.png';
 import mongodb from '../../../public/mongodb.png';
 import nestjs from '../../../public/nestjs.svg';
-import nextjs from '../../../public/nextjs.svg';
 import postgres from '../../../public/postgres.png';
 import prettier from '../../../public/prettier.png';
 import reactjs from '../../../public/reactjs.webp';

@@ -1,10 +1,5 @@
 import Constants from '@/utils/constants';
-import {
-  IconBrandDiscord,
-  IconBrandGithub,
-  IconBrandNextjs,
-  IconCode
-} from '@tabler/icons-react';
+import { IconBrandNextjs, IconCode } from '@tabler/icons-react';
 
 import Link from 'next/link';
 import { FC } from 'react';
