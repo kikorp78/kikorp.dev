@@ -1,4 +1,4 @@
-import { IconTools } from '@tabler/icons-react';
+import { IconBrandNextjs, IconTools } from '@tabler/icons-react';
 
 import { FC } from 'react';
 
@@ -21,81 +21,49 @@ import Tool from './components/tool';
 
 const Tools: FC = () => {
   return (
-    <div className="flex flex-col space-y-8">
-      <div className="flex items-center space-x-2">
-        <IconTools className="text-text" />
-        <p className="text-text text-paragraph-sm font-bold uppercase">
-          Tools and technologies in my arsenal
-        </p>
+    <div className="flex flex-col space-y-10">
+      <div className="flex flex-col space-y-4">
+        <div className="flex items-center space-x-2">
+          <IconTools className="text-text" />
+          <p className="text-text text-paragraph-sm font-bold uppercase">
+            Tools and technologies in my arsenal
+          </p>
+        </div>
       </div>
       <div className="flex flex-col space-y-4">
         <p className="text-text text-paragraph-xs font-medium uppercase">
           Programming Languages
         </p>
-        <hr className="w-full h-[1px] bg-border border-none" />
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 items-start gap-4">
-          <Tool
-            name="JavaScript"
-            description="Interpreted Language"
-            icon={javascript}
-          />
-          <Tool
-            name="TypeScript"
-            description="JavaScript Superset"
-            icon={typescript}
-          />
-          <Tool
-            name="Rust"
-            description="General-purpose Language"
-            icon={rust}
-          />
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 items-start gap-4">
+          <Tool name="JavaScript" icon={javascript} />
+          <Tool name="TypeScript" icon={typescript} />
+          <Tool name="Rust" icon={rust} />
         </div>
-        <p className="text-text text-paragraph-xs">
-          Also familiar with C++, C#, and Java.
-        </p>
       </div>
       <div className="flex flex-col space-y-4">
         <p className="text-text text-paragraph-xs font-medium uppercase">
           Libraries & Frameworks
         </p>
-        <hr className="w-full h-[1px] bg-border border-none" />
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 items-start gap-4">
-          <Tool
-            name="React.js"
-            description="Front-end UI Library"
-            icon={reactjs}
-          />
-          <Tool name="Next.js" description="React.js Framework" icon={nextjs} />
-          <Tool
-            name="Tailwind CSS"
-            description="CSS Framework"
-            icon={tailwindcss}
-          />
-          <Tool name="SASS/SCSS" description="CSS Preprocessor" icon={sass} />
-          <Tool
-            name="Nest.js"
-            description="Node.js Web Framework"
-            icon={nestjs}
-          />
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 items-start gap-4">
+          <Tool name="React.js" icon={reactjs} />
+          <Tool name="Next.js" icon={<IconBrandNextjs />} />
+          <Tool name="Tailwind CSS" icon={tailwindcss} />
+          <Tool name="SASS/SCSS" icon={sass} />
+          <Tool name="Nest.js" icon={nestjs} />
         </div>
       </div>
       <div className="flex flex-col space-y-4">
         <p className="text-text text-paragraph-xs font-medium uppercase">
           Databases & Other Tools
         </p>
-        <hr className="w-full h-[1px] bg-border border-none" />
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 items-start gap-4">
-          <Tool name="MongoDB" description="NoSQL Database" icon={mongodb} />
-          <Tool
-            name="PostgreSQL"
-            description="Relational Database"
-            icon={postgres}
-          />
-          <Tool name="Git" description="Version Control System" icon={git} />
-          <Tool name="VSCode" description="Code Editor" icon={vscode} />
-          <Tool name="ESLint" description="Linting Tool" icon={eslint} />
-          <Tool name="Prettier" description="Code Formatter" icon={prettier} />
-          <Tool name="Linux" description="Operating System" icon={linux} />
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 items-start gap-4">
+          <Tool name="MongoDB" icon={mongodb} />
+          <Tool name="PostgreSQL" icon={postgres} />
+          <Tool name="Git" icon={git} />
+          <Tool name="VSCode" icon={vscode} />
+          <Tool name="ESLint" icon={eslint} />
+          <Tool name="Prettier" icon={prettier} />
+          <Tool name="Linux" icon={linux} />
         </div>
       </div>
     </div>

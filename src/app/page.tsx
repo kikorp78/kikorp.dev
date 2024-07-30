@@ -3,7 +3,6 @@ import Navbar from '@/components/ui/navbar';
 
 import { FC } from 'react';
 
-import Contact from './components/contact';
 import Hero from './components/hero';
 import LandingContainer from './components/landing-container';
 import Projects from './components/projects';
@@ -21,7 +20,6 @@ const Home: FC = () => {
         </LandingContainer>
         <Repositories />
         <Tools />
-        <Contact />
         <Footer />
       </div>
     </div>
