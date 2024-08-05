@@ -8,7 +8,7 @@ interface Props {
 
 const Tool: FC<Props> = ({ name, icon }) => {
   return (
-    <div className="h-full hover:bg-background-hover flex items-center p-4 space-x-2 border border-border rounded-lg transition select-none">
+    <div className="flex h-full select-none items-center space-x-2 rounded-lg border border-border p-4 transition hover:bg-background-hover">
       {isValidElement(icon) ? (
         icon
       ) : (

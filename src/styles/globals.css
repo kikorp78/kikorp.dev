@@ -6,8 +6,8 @@
 :root {
   --primary: #8c58f5;
 
-  --text: #737373;
-  --text-hover: #595959;
+  --foreground: #737373;
+  --foreground-hover: #595959;
 
   --background: #f5f5f5;
   --background-hover: #ededed;
@@ -18,10 +18,10 @@
 }
 
 .dark {
-  --text: #737373;
-  --text-hover: #8c8c8c;
+  --foreground: #737373;
+  --foreground-hover: #8c8c8c;
 
-  --background: #0d0d0d;
+  --background: #111111;
   --background-hover: #1a1a1a;
 
   --border: #2b2b2b;
@@ -60,7 +60,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--border);
-  border-radius: 6px;
+  /* border-radius: 6px; */
 }
 
 ::-webkit-scrollbar-thumb:hover {

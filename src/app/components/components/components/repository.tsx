@@ -12,22 +12,26 @@ interface Props {
 const Repository: FC<Props> = ({ name, description, url, language }) => {
   return (
     <Link
-      className="hover:bg-background-hover flex flex-col xl:flex-row items-start p-4 xl:space-x-[10px] space-y-4 xl:space-y-0 border border-border rounded-lg cursor-pointer select-none transition"
+      className="flex cursor-pointer select-none flex-col items-start space-y-4 rounded-lg border border-border p-4 transition hover:bg-background-hover xl:flex-row xl:space-x-[10px] xl:space-y-0"
       href={url}
       target="_blank"
       rel="noopener,noreferrer"
     >
-      <div className="w-full flex flex-col space-y-2">
+      <div className="flex w-full flex-col space-y-2">
         <p className="text-paragraph-md font-semibold">{name}</p>
-        <p className="text-text text-paragraph-sm font-medium">{description}</p>
+        <p className="text-paragraph-sm font-medium text-foreground">
+          {description}
+        </p>
       </div>
       {language ? (
         <div className="flex items-center space-x-[6px]">
           <div
-            className="w-3 h-3 rounded-full"
+            className="size-3 rounded-full"
             style={{ backgroundColor: GitHubColors.get(language).color }}
           />
-          <p className="text-text text-paragraph-xs font-medium">{language}</p>
+          <p className="text-paragraph-xs font-medium text-foreground">
+            {language}
+          </p>
         </div>
       ) : null}
     </Link>

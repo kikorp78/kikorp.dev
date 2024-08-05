@@ -3,7 +3,7 @@
 import { Variants, motion } from 'framer-motion';
 import { FC, PropsWithChildren } from 'react';
 
-const container: Variants = {
+const landingContainerAnimation: Variants = {
   visible: {
     opacity: 1,
     transition: { duration: 0.5, delay: 0.5, ease: 'backOut' }
@@ -18,7 +18,7 @@ const LandingContainer: FC<PropsWithChildren> = ({ children }) => {
     <motion.div
       initial="hidden"
       animate="visible"
-      variants={container}
+      variants={landingContainerAnimation}
       className="flex flex-col space-y-16"
     >
       {children}

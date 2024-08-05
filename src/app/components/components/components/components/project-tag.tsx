@@ -12,11 +12,11 @@ interface Props {
 const ProjectTag: FC<Props> = ({ content, icon, url }) => {
   return (
     <div className="flex items-center space-x-[6px]">
-      {cloneElement(icon, { className: 'text-text' })}
+      {cloneElement(icon, { className: 'text-foreground' })}
       {url ? (
         <div className="group flex items-center space-x-[6px]">
           <Link
-            className="text-text group-hover:text-text-hover text-paragraph-xs font-medium transition"
+            className="text-paragraph-xs font-medium text-foreground transition group-hover:text-foreground-hover"
             href={url}
             target="_blank"
             rel="noopener,noreferrer"
@@ -24,12 +24,14 @@ const ProjectTag: FC<Props> = ({ content, icon, url }) => {
             {content}
           </Link>
           <IconExternalLink
-            className="text-text group-hover:text-text-hover transition"
+            className="text-foreground transition group-hover:text-foreground-hover"
             size={16}
           />
         </div>
       ) : (
-        <p className="text-text text-paragraph-xs font-medium">{content}</p>
+        <p className="text-paragraph-xs font-medium text-foreground">
+          {content}
+        </p>
       )}
     </div>
   );

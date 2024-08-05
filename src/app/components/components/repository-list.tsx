@@ -8,8 +8,8 @@ export const fetchRepos = async () => {
   try {
     const repos = await fetch('https://api.github.com/users/kikorp78/repos');
 
-    const data =
-      (await repos.json()) as Endpoints['GET /users/{username}/repos']['response']['data'];
+    const data: Endpoints['GET /users/{username}/repos']['response']['data'] =
+      await repos.json();
 
     return { data, err: null };
   } catch (err) {
@@ -21,7 +21,7 @@ const RepositoryList: FC = async () => {
   const { data } = await fetchRepos();
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-start gap-4">
+    <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-2 xl:grid-cols-3">
       {data!.map((repo) => (
         <Repository
           key={repo.id}

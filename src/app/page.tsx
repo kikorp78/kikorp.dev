@@ -1,5 +1,5 @@
-import Footer from '@/components/ui/footer';
-import Navbar from '@/components/ui/navbar';
+import Footer from '@/components/footer';
+import Navbar from '@/components/navbar';
 
 import { FC } from 'react';
 
@@ -11,7 +11,7 @@ import Tools from './components/tools';
 
 const Home: FC = () => {
   return (
-    <div className="w-full max-w-[1400px] h-full px-8">
+    <div className="size-full max-w-[1400px] px-8">
       <Navbar />
       <div className="flex flex-col space-y-24">
         <LandingContainer>

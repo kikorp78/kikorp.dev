@@ -26,17 +26,17 @@ const Tools: FC = () => {
     <div className="flex flex-col space-y-10">
       <div className="flex flex-col space-y-4">
         <div className="flex items-center space-x-2">
-          <IconTools className="text-text" />
-          <p className="text-text text-paragraph-sm font-bold uppercase">
+          <IconTools className="text-foreground" />
+          <p className="text-paragraph-sm font-bold uppercase text-foreground">
             Tools and technologies in my arsenal
           </p>
         </div>
       </div>
       <div className="flex flex-col space-y-4">
-        <p className="text-text text-paragraph-xs font-medium uppercase">
+        <p className="text-paragraph-xs font-medium uppercase text-foreground">
           Programming Languages
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-start gap-4">
+        <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           <Tool name="JavaScript" icon={javascript} />
           <Tool name="TypeScript" icon={typescript} />
           <Tool name="Rust" icon={rust} />
@@ -46,10 +46,10 @@ const Tools: FC = () => {
         </div>
       </div>
       <div className="flex flex-col space-y-4">
-        <p className="text-text text-paragraph-xs font-medium uppercase">
+        <p className="text-paragraph-xs font-medium uppercase text-foreground">
           Libraries & Frameworks
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-start gap-4">
+        <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           <Tool name="React.js" icon={reactjs} />
           <Tool name="Next.js" icon={<IconBrandNextjs />} />
           <Tool name="Tailwind CSS" icon={tailwindcss} />
@@ -58,10 +58,10 @@ const Tools: FC = () => {
         </div>
       </div>
       <div className="flex flex-col space-y-4">
-        <p className="text-text text-paragraph-xs font-medium uppercase">
+        <p className="text-paragraph-xs font-medium uppercase text-foreground">
           Databases & Other Tools
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-start gap-4">
+        <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           <Tool name="MongoDB" icon={mongodb} />
           <Tool name="PostgreSQL" icon={postgres} />
           <Tool name="Git" icon={git} />

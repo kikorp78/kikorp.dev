@@ -1,5 +1,3 @@
-'use client';
-
 import {
   IconBrandGithub,
   IconCalendar,
@@ -9,17 +7,15 @@ import {
   IconWorld
 } from '@tabler/icons-react';
 
-import clsx from 'clsx';
-import { Variants, motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 import { FC } from 'react';
 
 import ProjectTag from './components/project-tag';
+import ProjectWrapper from './components/project-wrapper';
 
-type ProjectColor = 'marvo' | 'spoke';
+export type ProjectColor = 'marvo' | 'spoke';
 
 interface Props {
-  variants: Variants;
   name: string;
   description: string;
   icon: StaticImageData;
@@ -34,7 +30,6 @@ interface Props {
 }
 
 const Project: FC<Props> = ({
-  variants,
   name,
   description,
   icon,
@@ -47,24 +42,9 @@ const Project: FC<Props> = ({
   startTime,
   endTime
 }) => {
-  const getColor = () => {
-    switch (color) {
-      case 'marvo':
-        return 'hover:bg-projects-marvo hover:border-projects-marvo';
-      case 'spoke':
-        return 'hover:bg-projects-spoke hover:border-projects-spoke';
-    }
-  };
-
   return (
-    <motion.div
-      variants={variants}
-      className={clsx(
-        'h-full hover:bg-opacity-10 flex flex-col xl:flex-row items-start p-4 xl:space-x-[10px] space-y-3 xl:space-y-0 border border-border rounded-lg select-none transition',
-        getColor()
-      )}
-    >
-      <div className="w-full flex flex-col space-y-4">
+    <ProjectWrapper color={color}>
+      <div className="flex w-full flex-col space-y-4">
         <div className="flex flex-col space-y-2">
           <div className="flex items-center space-x-2">
             <Image
@@ -76,7 +56,7 @@ const Project: FC<Props> = ({
             />
             <p className="text-paragraph-md font-semibold">{name}</p>
           </div>
-          <p className="text-text text-paragraph-sm font-medium">
+          <p className="text-paragraph-sm font-medium text-foreground">
             {description}
           </p>
         </div>
@@ -103,13 +83,13 @@ const Project: FC<Props> = ({
           )}
         </div>
       </div>
-      <div className="flex flex-shrink-0 items-center space-x-[6px]">
-        <IconCalendar className="text-text" />
-        <p className="text-text text-paragraph-xs font-medium">
+      <div className="flex shrink-0 items-center space-x-[6px]">
+        <IconCalendar className="text-foreground" />
+        <p className="text-paragraph-xs font-medium text-foreground">
           {startTime} &ndash; {endTime}
         </p>
       </div>
-    </motion.div>
+    </ProjectWrapper>
   );
 };
 

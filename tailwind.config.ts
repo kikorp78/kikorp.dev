@@ -9,15 +9,14 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      primary: '#8c58f5',
+      primary: 'var(--primary)',
       warning: '#f4b231',
-      text: 'var(--text)',
-      'text-hover': 'var(--text-hover)',
+      foreground: 'var(--foreground)',
+      'foreground-hover': 'var(--foreground-hover)',
       background: 'var(--background)',
       'background-hover': 'var(--background-hover)',
       border: 'var(--border)',
       projects: {
-        ivycord: '#29e08e',
         marvo: '#4d7fff',
         spoke: '#b66bd4'
       },
