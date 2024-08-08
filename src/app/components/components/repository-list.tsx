@@ -6,7 +6,11 @@ import Repository from './components/repository';
 
 export const fetchRepos = async () => {
   try {
-    const repos = await fetch('https://api.github.com/users/kikorp78/repos');
+    const repos = await fetch('https://api.github.com/users/kikorp78/repos', {
+      next: {
+        revalidate: 600
+      }
+    });
 
     const data: Endpoints['GET /users/{username}/repos']['response']['data'] =
       await repos.json();
