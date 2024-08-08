@@ -44,7 +44,7 @@ const Project: FC<Props> = ({
 }) => {
   return (
     <ProjectWrapper color={color}>
-      <div className="flex w-full flex-col space-y-4">
+      <div className="flex items-start space-x-[10px]">
         <div className="flex flex-col space-y-2">
           <div className="flex items-center space-x-2">
             <Image
@@ -60,34 +60,34 @@ const Project: FC<Props> = ({
             {description}
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
-          <ProjectTag content={role} icon={<IconUser />} />
-          <ProjectTag content={type} icon={<IconFlag />} />
-          <ProjectTag
-            content={openSource ? 'Open Source' : 'Source Not Available'}
-            icon={<IconCode />}
-          />
-          {githubURL && (
-            <ProjectTag
-              content="View on GitHub"
-              icon={<IconBrandGithub />}
-              url={githubURL}
-            />
-          )}
-          {websiteURL && (
-            <ProjectTag
-              content="Visit Website"
-              icon={<IconWorld />}
-              url={websiteURL}
-            />
-          )}
+        <div className="flex shrink-0 items-center space-x-[6px]">
+          <IconCalendar className="text-foreground" />
+          <p className="text-paragraph-xs font-medium text-foreground">
+            {startTime} &ndash; {endTime}
+          </p>
         </div>
       </div>
-      <div className="flex shrink-0 items-center space-x-[6px]">
-        <IconCalendar className="text-foreground" />
-        <p className="text-paragraph-xs font-medium text-foreground">
-          {startTime} &ndash; {endTime}
-        </p>
+      <div className="flex flex-wrap items-center gap-3">
+        <ProjectTag content={role} icon={<IconUser />} />
+        <ProjectTag content={type} icon={<IconFlag />} />
+        <ProjectTag
+          content={openSource ? 'Open Source' : 'Proprietary'}
+          icon={<IconCode />}
+        />
+        {githubURL && (
+          <ProjectTag
+            content="View on GitHub"
+            icon={<IconBrandGithub />}
+            url={githubURL}
+          />
+        )}
+        {websiteURL && (
+          <ProjectTag
+            content="Visit Website"
+            icon={<IconWorld />}
+            url={websiteURL}
+          />
+        )}
       </div>
     </ProjectWrapper>
   );

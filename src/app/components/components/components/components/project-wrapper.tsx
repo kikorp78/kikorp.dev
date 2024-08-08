@@ -34,7 +34,7 @@ const ProjectWrapper: FC<PropsWithChildren<Props>> = ({ children, color }) => {
     <motion.div
       variants={projectAnimation}
       className={clsx(
-        'flex h-full select-none flex-col items-start space-y-3 rounded-lg border border-border p-4 transition xl:flex-row xl:space-x-[10px] xl:space-y-0',
+        'flex h-full select-none flex-col space-y-3 rounded-lg border border-border p-4 transition',
         getColor()
       )}
     >
