@@ -11,7 +11,15 @@ const EmailButton: FC = () => {
   const handleClick = () => {
     navigator.clipboard
       .writeText(Constants.EMAIL)
-      .then(() => toast('Email copied to clipboard', { icon: '📋' }))
+      .then(() =>
+        toast('Email copied to clipboard', {
+          icon: '📋',
+          style: {
+            backgroundColor: 'var(--background-hover)',
+            color: 'var(--foreground-hover)'
+          }
+        })
+      )
       .catch(() => toast.error('Failed to copy email to clipboard'));
   };
 
