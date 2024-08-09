@@ -26,6 +26,7 @@ const ProjectContainer: FC = () => {
         color="spoke"
         role="Co-Owner & Lead Developer"
         type="Discord Server"
+        websiteURL="https://web.archive.org/web/20210921224948/https://spoke.pw/#/"
         startTime="Late 2020"
         endTime="Late 2022"
       />
