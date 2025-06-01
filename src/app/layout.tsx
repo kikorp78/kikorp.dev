@@ -9,13 +9,12 @@ import Providers from './providers';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'kikorp.dev',
-  description:
-    'A personal website of a full-stack web developer. Thank you for visiting!'
+  title: 'kikorp.dev | Portfolio',
+  description: 'A software engineer based in Germany.'
 };
 
 export const viewport: Viewport = {
-  themeColor: '#8c58f5'
+  themeColor: '#f5a658'
 };
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {

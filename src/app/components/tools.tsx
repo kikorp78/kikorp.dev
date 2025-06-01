@@ -6,6 +6,7 @@ import cpp from '../../../public/cpp.png';
 import csharp from '../../../public/csharp.png';
 import eslint from '../../../public/eslint.png';
 import git from '../../../public/git.png';
+import htmlcss from '../../../public/htmlcss.png';
 import java from '../../../public/java.webp';
 import javascript from '../../../public/javascript.png';
 import linux from '../../../public/linux.png';
@@ -18,7 +19,6 @@ import rust from '../../../public/rust.png';
 import sass from '../../../public/sass.png';
 import tailwindcss from '../../../public/tailwindcss.png';
 import typescript from '../../../public/typescript.png';
-import vscode from '../../../public/vscode.png';
 import Tool from './components/tool';
 
 const Tools: FC = () => {
@@ -34,9 +34,10 @@ const Tools: FC = () => {
       </div>
       <div className="flex flex-col space-y-4">
         <p className="text-paragraph-xs font-medium uppercase text-foreground">
-          Programming Languages
+          Languages
         </p>
         <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          <Tool name="HTML/CSS" icon={htmlcss} />
           <Tool name="JavaScript" icon={javascript} />
           <Tool name="TypeScript" icon={typescript} />
           <Tool name="Rust" icon={rust} />
@@ -52,9 +53,9 @@ const Tools: FC = () => {
         <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           <Tool name="React.js" icon={reactjs} />
           <Tool name="Next.js" icon={<IconBrandNextjs />} />
-          <Tool name="Tailwind CSS" icon={tailwindcss} />
-          <Tool name="SASS/SCSS" icon={sass} />
           <Tool name="Nest.js" icon={nestjs} />
+          <Tool name="SASS/SCSS" icon={sass} />
+          <Tool name="Tailwind CSS" icon={tailwindcss} />
         </div>
       </div>
       <div className="flex flex-col space-y-4">
@@ -62,13 +63,12 @@ const Tools: FC = () => {
           Databases & Other Tools
         </p>
         <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-          <Tool name="MongoDB" icon={mongodb} />
-          <Tool name="PostgreSQL" icon={postgres} />
-          <Tool name="Git" icon={git} />
-          <Tool name="VSCode" icon={vscode} />
-          <Tool name="ESLint" icon={eslint} />
-          <Tool name="Prettier" icon={prettier} />
-          <Tool name="Linux" icon={linux} />
+          <Tool name="MongoDB" icon={mongodb} description="Database" />
+          <Tool name="PostgreSQL" icon={postgres} description="Database" />
+          <Tool name="Git" icon={git} description="Source Control" />
+          <Tool name="ESLint" icon={eslint} description="Linter" />
+          <Tool name="Prettier" icon={prettier} description="Formatter" />
+          <Tool name="Linux" icon={linux} description="Operating System" />
         </div>
       </div>
     </div>

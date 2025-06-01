@@ -15,11 +15,11 @@ const Hero: FC = () => {
         <h1 className="text-center text-mobile-h3 font-bold sm:text-mobile-h2 md:text-desktop-h1">
           based in{' '}
           <span className="landing-container-animation landing-container-animation-second border-b-4 border-warning">
-            Belgrade, Serbia
+            Duisburg, Germany
           </span>
         </h1>
       </div>
-      <IconArrowDown className="animate-bounce" />
+      <IconArrowDown className="animate-bounce text-foreground" size={32} />
     </div>
   );
 };

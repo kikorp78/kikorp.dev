@@ -4,7 +4,7 @@ import { IconBrandDiscord, IconBrandGithub } from '@tabler/icons-react';
 import Image from 'next/image';
 import { FC } from 'react';
 
-import avatar from '../../public/avatar.gif';
+import avatar from '../../public/klopov.png';
 import EmailButton from './components/email-button';
 import NavbarLink from './components/navbar-link';
 import NavbarWrapper from './components/navbar-wrapper';

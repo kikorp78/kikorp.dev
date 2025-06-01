@@ -10,7 +10,7 @@ const Projects: FC = () => {
       <div className="flex items-center space-x-2">
         <IconBulb className="text-foreground" />
         <p className="text-paragraph-sm font-bold uppercase text-foreground">
-          Projects and prior experience
+          Notable Public Projects
         </p>
       </div>
       <ProjectContainer />

@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     colors: {
       primary: 'var(--primary)',
-      warning: '#f4b231',
+      warning: '#f5a658',
       foreground: 'var(--foreground)',
       'foreground-hover': 'var(--foreground-hover)',
       background: 'var(--background)',

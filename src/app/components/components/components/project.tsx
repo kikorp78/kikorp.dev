@@ -23,6 +23,7 @@ interface Props {
   role: string;
   type: string;
   openSource?: boolean;
+  discontinued?: boolean;
   githubURL?: string;
   websiteURL?: string;
   startTime: string;
@@ -37,6 +38,7 @@ const Project: FC<Props> = ({
   role,
   type,
   openSource,
+  discontinued,
   githubURL,
   websiteURL,
   startTime,
@@ -83,7 +85,7 @@ const Project: FC<Props> = ({
         )}
         {websiteURL && (
           <ProjectTag
-            content="Visit Website"
+            content={discontinued ? 'Visit Archive' : 'Visit Website'}
             icon={<IconWorld />}
             url={websiteURL}
           />

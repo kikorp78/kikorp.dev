@@ -66,7 +66,7 @@ const Tooltip: FC<PropsWithChildren<Props>> = ({ children, content }) => {
             exit="hidden"
             variants={tooltipAnimation}
             ref={tooltipRef}
-            className="absolute left-[-9999px] top-[-9999px] z-10 !m-0 w-max select-none rounded-md border border-border bg-background-hover px-2 py-1 text-paragraph-xs font-medium text-foreground"
+            className="absolute left-[-9999px] top-[-9999px] z-10 !m-0 w-max select-none rounded-md border border-border bg-background-hover px-2 py-1 text-paragraph-sm font-medium text-foreground"
           >
             {content}
           </motion.div>

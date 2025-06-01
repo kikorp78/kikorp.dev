@@ -3,12 +3,13 @@ import { FC, ReactElement, isValidElement } from 'react';
 
 interface Props {
   name: string;
+  description?: string;
   icon: StaticImageData | ReactElement;
 }
 
-const Tool: FC<Props> = ({ name, icon }) => {
+const Tool: FC<Props> = ({ name, description, icon }) => {
   return (
-    <div className="flex h-full select-none items-center space-x-2 rounded-lg border border-border p-4 transition hover:bg-background-hover">
+    <div className="flex h-full select-none items-center space-x-3 rounded-lg border border-border p-4 transition hover:bg-background-hover">
       {isValidElement(icon) ? (
         icon
       ) : (
@@ -19,7 +20,14 @@ const Tool: FC<Props> = ({ name, icon }) => {
           alt="tool image"
         />
       )}
-      <p className="text-paragraph-sm font-semibold">{name}</p>
+      <div className="flex flex-col">
+        <p className="text-paragraph-sm font-semibold">{name}</p>
+        {description ? (
+          <p className="text-paragraph-xs font-semibold text-foreground">
+            {description}
+          </p>
+        ) : null}
+      </div>
     </div>
   );
 };

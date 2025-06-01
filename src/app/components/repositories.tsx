@@ -11,7 +11,7 @@ const Repositories: FC = () => {
       <div className="flex items-center space-x-2">
         <IconBrandGithub className="text-foreground" />
         <p className="text-paragraph-sm font-bold uppercase text-foreground">
-          GitHub Repositories
+          Public GitHub Repositories
         </p>
       </div>
       <Suspense
